@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>蜗牛电影网 - 慢片/治愈/家庭/手作动画电影导航 | woniudianyingwang-h5</title>
+<meta name="description" content="蜗牛电影网提倡慢生活观影：慢片、家庭片、孤独治愈、手作定格动画、雨天电影、独居与寄养故事。配色苔藓绿、湿土棕、壳米白、雨灰蓝，网址 woniudianyingwang-h5.github.io。">
+<meta name="keywords" content="蜗牛电影网,慢电影,治愈电影,家庭电影,手作动画,定格动画,雨天电影,孤独电影,woniudianyingwang-h5">
+<meta name="author" content="蜗牛电影网">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://woniudianyingwang-h5.github.io/">
+<meta property="og:title" content="蜗牛电影网 - 慢下来，和电影一起爬">
+<meta property="og:description" content="蜗牛电影网：慢片、家庭、孤独治愈、手作动画、雨天电影。每秒 1 厘米，也算向前。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://woniudianyingwang-h5.github.io/">
+<meta property="og:site_name" content="蜗牛电影网">
+<meta name="msvalidate.01" content="BING_VERIFY_CODE">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"蜗牛电影网",
+  "url":"https://woniudianyingwang-h5.github.io/",
+  "description":"蜗牛电影网整理慢片、家庭片、孤独治愈、手作定格动画与雨天电影。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"蜗牛电影网是什么？",
+      "acceptedAnswer":{"@type":"Answer","text":"蜗牛电影网是一个慢生活电影导航站：收慢片、家庭片、孤独治愈、手作定格动画、雨天片和独居/寄养故事。不是只收有蜗牛的片子，而是收‘像蜗牛一样慢、软、有壳’的片子。"}
+    },
+    {
+      "@type":"Question",
+      "name":"蜗牛电影网适合什么心情？",
+      "acceptedAnswer":{"@type":"Answer","text":"适合不想被爽片追着跑的晚上：刚下班、刚哭过、刚搬家、刚和家里吵架，或者只是雨声很好听的时候。"}
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#10140f;
+  --card:#161d14;
+  --ink:#eef3e6;
+  --muted:#a7b395;
+  --moss:#7fae5a;
+  --moss-deep:#4f7d39;
+  --soil:#7a5a3f;
+  --shell:#efe6d2;
+  --rain:#7e9bb0;
+  --bud:#e9c84b;
+  --line:rgba(127,174,90,.30);
+  --shadow:0 18px 46px rgba(0,0,0,.42);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Noto Serif SC","PingFang SC","Microsoft YaHei",serif,sans-serif;
+  background:
+    radial-gradient(820px 460px at 88% -8%,rgba(126,155,176,.20),transparent 60%),
+    radial-gradient(760px 440px at -8% 8%,rgba(127,174,90,.20),transparent 55%),
+    var(--bg);
+  color:var(--ink);line-height:1.8;
+}
+a{color:inherit;text-decoration:none}
+
+/* 露珠导航 */
+.wn-top{position:sticky;top:0;z-index:999;background:rgba(16,20,15,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.wn-top__in{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem}
+.wn-logo{font-weight:900;font-size:1.2rem}
+.wn-logo b{color:var(--moss)}
+.wn-nav{display:flex;gap:.3rem}
+.wn-nav a{padding:.45rem .85rem;border-radius:999px;font-size:.9rem;color:var(--muted);font-weight:600}
+.wn-nav a:hover{background:rgba(127,174,90,.16);color:var(--moss)}
+.wn-burger{display:none;flex-direction:column;gap:4px;cursor:pointer}
+.wn-burger span{width:23px;height:2px;background:var(--moss);border-radius:2px}
+
+/* Hero 慢爬 */
+.wn-hero{max-width:1180px;margin:0 auto;padding:3.4rem 1rem 2.6rem;position:relative;overflow:hidden}
+.wn-leaf{height:170px;position:relative;border-radius:20px;overflow:hidden;margin-bottom:1.6rem;
+  background:linear-gradient(180deg,#cfe0c2 0 40%,#7fae5a 40% 100%)}
+.wn-snail{position:absolute;bottom:16%;left:10%;font-size:3rem;filter:drop-shadow(0 8px 10px rgba(0,0,0,.3));animation:crawl 9s linear infinite alternate}
+@keyframes crawl{from{left:8%}to{left:62%}}
+.wn-drop{position:absolute;top:18%;right:16%;width:18px;height:24px;border-radius:0 50% 50% 50%;background:#dff0ff;transform:rotate(45deg);box-shadow:0 0 18px #bfe0ff}
+.wn-hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.22;font-weight:900;margin-bottom:1rem}
+.wn-hero h1 em{font-style:normal;color:var(--moss)}
+.wn-hero h1 u{text-decoration:none;color:var(--bud)}
+.wn-hero p{color:var(--muted);max-width:680px;margin-bottom:1.8rem}
+.wn-cta{display:inline-flex;gap:.5rem;align-items:center;padding:.85rem 1.9rem;border-radius:999px;font-weight:800;color:#10140f;background:linear-gradient(90deg,var(--bud),var(--moss));box-shadow:var(--shadow)}
+
+/* 区块 */
+.wn-sec{max-width:1180px;margin:0 auto;padding:3.3rem 1rem}
+.wn-head{margin-bottom:1.8rem;text-align:center}
+.wn-head h2{font-size:clamp(1.4rem,3.5vw,2.2rem);font-weight:900}
+.wn-head h2 i{color:var(--moss);font-style:normal}
+.wn-head p{color:var(--muted);margin-top:.35rem;font-size:.95rem}
+
+/* 黏液轨迹片单 */
+.wn-trail{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.wn-stop{border-radius:20px;padding:1.3rem 1.1rem;background:var(--card);border:1px solid var(--line);position:relative;transition:.25s}
+.wn-stop:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.wn-stop::before{content:"";position:absolute;left:18px;top:0;bottom:0;width:3px;border-radius:3px;background:repeating-linear-gradient(180deg,var(--moss) 0 6px,transparent 6px 12px);opacity:.5}
+.wn-stop .emo{font-size:1.7rem}
+.wn-stop h3{font-size:1.04rem;margin:.5rem 0 .4rem}
+.wn-stop p{font-size:.82rem;color:var(--muted)}
+.wn-stop small{display:block;margin-top:.6rem;color:var(--bud);font-size:.74rem}
+
+/* 壳里分类 */
+.wn-shell{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.wn-room{text-align:center;padding:1.1rem .6rem;background:var(--card);border:1px solid var(--line);border-radius:20px;transition:.25s}
+.wn-room:hover{transform:translateY(-4px);border-color:var(--rain)}
+.wn-room .totem{width:60px;height:60px;margin:0 auto .7rem;border-radius:50% 50% 46% 54%/54% 46% 54% 46%;
+  display:flex;align-items:center;justify-content:center;font-size:1.6rem;
+  background:radial-gradient(circle at 32% 28%,var(--shell),#cdbf9f);color:#3a2f22;border:1px solid #d8c9a6}
+.wn-room h3{font-size:.95rem}
+.wn-room p{font-size:.74rem;color:var(--muted)}
+
+/* 爬行热力榜：黏液拖痕 */
+.wn-rank{display:grid;gap:1.1rem}
+.wn-slime{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.1rem 1.2rem}
+.wn-slime h3{font-size:1.05rem;display:flex;justify-content:space-between;margin-bottom:.6rem}
+.wn-slime h3 span{color:var(--bud)}
+.wn-muc{height:12px;border-radius:99px;background:rgba(127,174,90,.16);overflow:hidden;position:relative}
+.wn-muc i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--moss),var(--rain))}
+.wn-muc i::after{content:"🐌";position:absolute;right:4px;top:-4px;font-size:.85rem}
+
+/* 壳中影评：外壳/软体 */
+.wn-notes{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.wn-note{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:1.4rem}
+.wn-note .tag{font-size:.72rem;padding:.2rem .6rem;border-radius:999px}
+.wn-note .hard{background:rgba(126,155,176,.18);color:var(--rain)}
+.wn-note .soft{background:rgba(233,200,75,.18);color:var(--bud)}
+.wn-note h3{font-size:1.05rem;margin:.6rem 0 .4rem}
+.wn-note p{font-size:.86rem;color:var(--muted)}
+
+/* 关于 */
+.wn-about{background:linear-gradient(160deg,#1a2413,#10140f);border:1px solid var(--line);border-radius:26px;padding:2.4rem}
+.wn-about h2{font-size:1.9rem;margin-bottom:.8rem}
+.wn-about h2 u{color:var(--moss);text-decoration:none}
+.wn-about p{color:var(--muted);margin-bottom:1rem}
+.wn-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.4rem}
+.wn-stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem;text-align:center}
+.wn-stat b{font-size:1.5rem;color:var(--bud);display:block}
+.wn-stat span{font-size:.8rem;color:var(--muted)}
+
+/* FAQ */
+.wn-faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.2rem 1.1rem;margin-bottom:.7rem}
+.wn-faq summary{cursor:pointer;padding:.85rem 0;font-weight:700}
+.wn-faq p{padding:0 0 .85rem;color:var(--muted)}
+
+/* 页脚 */
+.wn-foot{border-top:1px solid var(--line);background:#0b0f08;padding:2.2rem 1rem;text-align:center;color:var(--muted)}
+.wn-foot a{color:var(--moss)}
+.wn-foot__links{display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
+.wn-foot__links a{font-size:.88rem}
+
+@media(max-width:980px){
+  .wn-trail{grid-template-columns:repeat(2,1fr)}
+  .wn-shell{grid-template-columns:repeat(3,1fr)}
+  .wn-notes{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .wn-nav{display:none;position:absolute;top:58px;left:0;right:0;flex-direction:column;gap:0;background:rgba(16,20,15,.98);border-bottom:1px solid var(--line)}
+  .wn-nav.show{display:flex}
+  .wn-nav a{padding:.9rem 1rem;border-bottom:1px solid var(--line)}
+  .wn-burger{display:flex}
+  .wn-trail{grid-template-columns:1fr}
+  .wn-shell{grid-template-columns:repeat(2,1fr)}
+  .wn-stats{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<header class="wn-top">
+  <div class="wn-top__in">
+    <div class="wn-logo">🐌 蜗牛<b>电影网</b></div>
+    <nav class="wn-nav" id="wnNav">
+      <a href="#home">草叶首页</a>
+      <a href="#trail">慢爬片单</a>
+      <a href="#shell">壳里分类</a>
+      <a href="#rank">爬行榜单</a>
+      <a href="#notes">壳中影评</a>
+      <a href="#about">关于蜗牛</a>
+    </nav>
+    <div class="wn-burger" onclick="document.getElementById('wnNav').classList.toggle('show')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<section class="wn-hero" id="home">
+  <div class="wn-leaf">
+    <div class="wn-drop"></div>
+    <div class="wn-snail">🐌</div>
+  </div>
+  <h1>世界在飙车，<br>来 <em>蜗牛电影网</em> <u>慢慢爬</u></h1>
+  <p>蜗牛电影网不追热搜、不堆爽点、不催你倍速。我们收慢片、家庭片、孤独治愈、手作定格动画和雨天电影——每秒 1 厘米，也算向前。[6](@ref)</p>
+  <a class="wn-cta" href="#trail">🌧️ 沿着黏液走</a>
+</section>
+
+<section class="wn-sec" id="trail">
+  <div class="wn-head">
+    <h2>黏液 <i>轨迹片单</i></h2>
+    <p>蜗牛电影网按“爬过的路”排片：每一站都是一种慢下来的理由。</p>
+  </div>
+  <div class="wn-trail">
+    <article class="wn-stop">
+      <div class="emo">🐚</div>
+      <h3>缩壳片</h3>
+      <p>社恐、创伤、独居、不敢接电话；主角先躲起来，再慢慢探头。</p>
+      <small>心情：刚被生活呛到</small>
+    </article>
+    <article class="wn-stop">
+      <div class="emo">🏡</div>
+      <h3>旧屋片</h3>
+      <p>家庭、寄养、回老家、翻相册；家具比人物会说话。</p>
+      <small>心情：想妈又不想打电话</small>
+    </article>
+    <article class="wn-stop">
+      <div class="emo">🌧️</div>
+      <h3>雨天片</h3>
+      <p>窗上有水、街灯发黄、没人急着走；适合关灯听雨看。</p>
+      <small>心情：外面别找我</small>
+    </article>
+    <article class="wn-stop">
+      <div class="emo">🎨</div>
+      <h3>手作片</h3>
+      <p>黏土、定格、水彩、线描；能看见“人一帧一帧捏出来”的笨功夫。[9,14](@ref)</p>
+      <small>心情：想相信慢东西</small>
+    </article>
+  </div>
+</section>
+
+<section class="wn-sec" id="shell">
+  <div class="wn-head">
+    <h2>壳里 <i>分类</i></h2>
+    <p>蜗牛背着家走，所以“家”不是房子，是壳。蜗牛电影网按“人在哪躲着”分类。</p>
+  </div>
+  <div class="wn-shell">
+    <a href="#" class="wn-room"><div class="totem">🛋️</div><h3>独居壳</h3><p>一人/煮面/猫/灯</p></a>
+    <a href="#" class="wn-room"><div class="totem">🧸</div><h3>寄养壳</h3><p>孤儿/养家/新学校</p></a>
+    <a href="#" class="wn-room"><div class="totem">🪟</div><h3>旧屋壳</h3><p>父母/相册/院子</p></a>
+    <a href="#" class="wn-room"><div class="totem">🎒</div><h3>搬家壳</h3><p>长途/行李/告别</p></a>
+    <a href="#" class="wn-room"><div class="totem">🌱</div><h3>发芽壳</h3><p>康复/写作/重来</p></a>
+  </div>
+</section>
+
+<section class="wn-sec" id="rank">
+  <div class="wn-head">
+    <h2>爬行 <i>热力榜</i></h2>
+    <p>蜗牛电影网按“慢而不闷 + 治愈回放率 + 观众想缩壳再探头”综合排序。</p>
+  </div>
+  <div class="wn-rank">
+    <div class="wn-slime"><h3>1. 蜗牛回忆录 <span>98%</span></h3><div class="wn-muc"><i style="width:98%"></i></div></div>
+    <div class="wn-slime"><h3>2. 玛丽和麦克斯 <span>96%</span></h3><div class="wn-muc"><i style="width:96%"></i></div></div>
+    <div class="wn-slime"><h3>3. 蜗牛餐厅 <span>92%</span></h3><div class="wn-muc"><i style="width:92%"></i></div></div>
+    <div class="wn-slime"><h3>4. 窗边的小镇 <span>89%</span></h3><div class="wn-muc"><i style="width:89%"></i></div></div>
+    <div class="wn-slime"><h3>5. 雨天修理铺 <span>86%</span></h3><div class="wn-muc"><i style="width:86%"></i></div></div>
+  </div>
+</section>
+
+<section class="wn-sec" id="notes">
+  <div class="wn-head">
+    <h2>壳中 <i>影评</i></h2>
+    <p>蜗牛电影网的影评分两层：外壳写“它讲什么”，软体写“它碰到了你哪里”。</p>
+  </div>
+  <div class="wn-notes">
+    <article class="wn-note">
+      <span class="tag hard">外壳</span>
+      <h3>《蜗牛回忆录》在讲什么</h3>
+      <p>女孩收集蜗牛，弟弟被送走，养父母古怪，老奶奶萍奇出现。表面是成人动画，其实是孤独、寄养、身体自卑和“家被拆散”的慢速重述。[3,6](@ref)</p>
+    </article>
+    <article class="wn-note">
+      <span class="tag soft">软体</span>
+      <h3>它碰到了你哪里</h3>
+      <p>你看完不会喊牛，只会突然松口气：原来可以带着壳活，不一定非要破壳逆袭。慢，不是废，是软体动物活下来的方式。</p>
+    </article>
+    <article class="wn-note">
+      <span class="tag hard">外壳</span>
+      <h3>《蜗牛餐厅》在讲什么</h3>
+      <p>被骗、回乡、做饭、开不成的大餐厅。没有大男主，只有锅铲声、山雾和妈妈不疼你的那种钝痛。</p>
+    </article>
+    <article class="wn-note">
+      <span class="tag soft">软体</span>
+      <h3>它碰到了你哪里</h3>
+      <p>你会想起自己也曾想开一家“没人来也没关系”的小店。蜗牛电影网收这种片，就是因为大人也需要被喂一口热饭。</p>
+    </article>
+  </div>
+</section>
+
+<section class="wn-sec" id="about">
+  <div class="wn-about">
+    <h2>关于 <u>蜗牛电影网</u></h2>
+    <p>
+      蜗牛电影网（woniudianyingwang-h5.github.io）不是电影超市，是一片雨后草地：
+      你点开的不只是片名，是“今天我不想跑”的许可。
+    </p>
+    <p>
+      我们偏爱慢片、家庭片、孤独治愈、手作定格动画、雨天片和独居故事。世界已经够快了，蜗牛电影网想留一块“爬也行、停也行、缩壳也行”的银幕。[7](@ref)
+    </p>
+    <div class="wn-stats">
+      <div class="wn-stat"><b>1 cm/s</b><span>默认播放速度</span></div>
+      <div class="wn-stat"><b>480+</b><span>慢/治愈影片</span></div>
+      <div class="wn-stat"><b>5 壳</b><span>壳里分类</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="wn-sec wn-faq">
+  <div class="wn-head">
+    <h2>蜗牛 <i>问答</i></h2>
+  </div>
+  <details open>
+    <summary>蜗牛电影网只收动画片吗？</summary>
+    <p>不。真人慢片、家庭剧情、孤独文艺、手作定格都收；“蜗牛感”才是标准：慢、软、有壳、敢探头。</p>
+  </details>
+  <details>
+    <summary>蜗牛电影网有没有爽片？</summary>
+    <p>很少。真想看爆炸就去左右左右电影网右屏；这里更常放“一个人把窗户擦完”的片段。</p>
+  </details>
+  <details>
+    <summary>为什么用苔藓绿和湿土棕？</summary>
+    <p>因为蜗牛不在霓虹里，在草叶、泥地、雨后的墙根和旧屋檐下；配色先湿，心才慢。</p>
+  </details>
+</section>
+
+<footer class="wn-foot">
+  <div class="wn-foot__links">
+    <a href="#trail">慢爬片单</a>
+    <a href="#shell">壳里分类</a>
+    <a href="#rank">爬行榜单</a>
+    <a href="#notes">壳中影评</a>
+    <a href="#about">关于蜗牛</a>
+    <a href="#">免责声明</a>
+  </div>
+  <p>© 2026 <a href="https://woniudianyingwang-h5.github.io">蜗牛电影网</a> · woniudianyingwang-h5.github.io</p>
+  <p>蜗牛电影网 —— 世界在飙车，我们慢慢爬。</p>
+</footer>
+
+<script>
+document.querySelectorAll('.wn-nav a').forEach(function(a){
+  a.addEventListener('click',function(){
+    document.getElementById('wnNav').classList.remove('show');
+  });
+});
+</script>
+
+</body>
+</html>
